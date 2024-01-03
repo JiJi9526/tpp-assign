@@ -40,6 +40,27 @@
     background-color: #f59e9e;
     display: flex;
     width: 100%;
+    padding: 10px;
+}
+
+@mixin before{
+    content: "+";
+    position: absolute;
+    width: 1px;
+    height:10px;
+    left: 850px;
+    bottom: 5px;
+    margin-left: -70px;
+    background:$color;
+
+}
+
+.sign::after{
+    color: #fff;
+    content: "+";
+    position: absolute;
+    left: 1150px;
+    margin-left: -70px;
 }
 
 h1{
@@ -60,40 +81,26 @@ h1{
     @include content1;
     .l-content__bloc{
         flex-wrap: wrap;
+        overflow: hidden;
         img{
             width: 200px;
-            overflow: hidden;
         }
     }
 }
 
-// .img_hover a{
-//     transform: scale(1.08);
-//     transition: all;
-//     overflow: hidden;
-// }
-
-// .img_hover:hover img{
-//     opacity: 1;
-//     transform: scale(1.05);
-//     transition: all 1s ease;
-//     overflow: hidden;
-// }
-// .img_hover:hover{
-//     transform: scale(1.08);
-// }
-a:hover img {
+.img__hover:hover{
     opacity: 1;
-    transform: scale(1.05);
+    transform: scale(1.08);
     transition: all 1s ease;
 }
- a:hover{
-    transform: scale(1.08);
- }
 
 .c-content{
     .c-content__bloc{
         @include content2;
+        a{
+            color: black;
+            text-decoration: none;
+        }
     }
 
 }
@@ -107,6 +114,7 @@ a:hover img {
     text-shadow: #df4141;
     text-decoration: none;
     transition: all 1s ease;
+    margin: 8px;
     a{
         color: black;
         text-decoration: none;

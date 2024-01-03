@@ -3,6 +3,14 @@
   margin: 0 auto;
 }
 
+.sign::after {
+  color: #fff;
+  content: "+";
+  position: absolute;
+  left: 1150px;
+  margin-left: -70px;
+}
+
 h1 {
   background-color: black;
   color: white;
@@ -35,26 +43,27 @@ h1 {
 }
 .l-content .l-content__bloc {
   flex-wrap: wrap;
+  overflow: hidden;
 }
 .l-content .l-content__bloc img {
   width: 200px;
-  overflow: hidden;
 }
 
-a:hover img {
+.img__hover:hover {
   opacity: 1;
-  transform: scale(1.05);
-  transition: all 1s ease;
-}
-
-a:hover {
   transform: scale(1.08);
+  transition: all 1s ease;
 }
 
 .c-content .c-content__bloc {
   background-color: #f59e9e;
   display: flex;
   width: 100%;
+  padding: 10px;
+}
+.c-content .c-content__bloc a {
+  color: black;
+  text-decoration: none;
 }
 
 .p-btn {
@@ -66,6 +75,7 @@ a:hover {
   text-shadow: #df4141;
   text-decoration: none;
   transition: all 1s ease;
+  margin: 8px;
 }
 .p-btn a {
   color: black;
